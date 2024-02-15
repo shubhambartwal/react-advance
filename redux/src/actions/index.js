@@ -1,8 +1,10 @@
+import { nanoid } from 'nanoid'
 export const addTodo=(text)=>{
     return {
         type:'ADD_TASK',
         payload:{
-            id:Date.getTime(),
+
+            id : nanoid(),
             text:text
         }
     }
