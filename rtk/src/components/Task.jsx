@@ -1,7 +1,8 @@
 import { useDispatch } from "react-redux"
 import { addTodo } from "../features/todo/todoSlice";
+import { useRef } from "react";
 
-export function Task() {
+ function Task() {
     const dispatch = useDispatch();
     const inputRef = useRef(null)
     const handleAdd = () => {
@@ -14,9 +15,10 @@ export function Task() {
     return (<div className="task-component">
         <div className="add-task">     
            <input type="text" placeholder="Enter the todo item" ref={inputRef} className="taskInput" />
-            <Button onClick={handleAdd}>Add Todo</Button>
+            <button onClick={handleAdd}>Add Todo</button>
         </div>
 
     </div>
     )
 }
+export default Task;
